@@ -1,0 +1,54 @@
+.team-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.team-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.team-logo:hover {
+    transform: rotate(360deg);
+}
+
+.list-group-item {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.team-flag {
+    width: 50px;
+    height: 30px;
+    object-fit: contain;
+    transition: transform 0.3s;
+
+}
+
+.team-flag:hover {
+    transform: scale(1.1);
+}

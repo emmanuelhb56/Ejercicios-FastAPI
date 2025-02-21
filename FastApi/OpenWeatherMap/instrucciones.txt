@@ -1,0 +1,14 @@
+1. Instalar dependencias: pip install -r requirements.txt
+
+   Para instalar las dependencias se utiliza el comando pip install -r requirements.txt, este comando busca en el archivo requirements.txt las dependencias necesarias para que el proyecto funcione correctamente. Estas dependencias son:
+   - fastapi==0.100.0
+   - uvicorn==0.22.0
+   - requests==2.28.2
+   - python-dotenv==0.21.1
+   - jinja2==3.1.2
+   - pydantic==1.10.6
+
+2. Puedes probar cambiando la URL:
+
+   La URL por defecto es http://127.0.0.1:8000/, pero puedes cambiar la ciudad que se va a consultar en la API de OpenWeatherMap. 
+   Por ejemplo, si deseas consultar el clima en Veracruz, puedes cambiar la URL a: http://127.0.0.1:8000/?ciudad=Veracruz
