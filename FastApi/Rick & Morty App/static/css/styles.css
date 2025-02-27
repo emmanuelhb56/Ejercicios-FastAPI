@@ -1,0 +1,174 @@
+/* Cargar fuentes personalizadas desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* Definir el fondo del sitio con un estilo cósmico */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('/static/img/tv_show_rick_and_morty_season_4_background_hd_movies.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #39FF14;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Estilo de las tarjetas de los personajes */
+.card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border-radius: 15px;
+    border: 2px solid #39FF14;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagen que ocupa toda la tarjeta */
+.card-img-top {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Colocamos la imagen detrás del texto */
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0.5); /* Oscurecer la imagen */
+    border-radius: 15px;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Asegura que el texto esté al fondo */
+    color: #fff;
+    text-align: center;
+    position: relative; /* Necesario para el texto encima de la imagen */
+    z-index: 1;
+}
+
+/* Título y texto sobre la imagen */
+.card-title {
+    font-size: 1.7rem;
+    color: #39FF14;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar legibilidad */
+}
+
+.card-text {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+}
+
+/* Botón dentro de las tarjetas */
+.btn-primary {
+    background-color: #39FF14 !important;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #2bdf00 !important;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    background-color: #39FF14 !important;
+    transform: translateY(2px);
+}
+
+/* Estilos de los modales */
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    border: 2px solid #39FF14;
+}
+
+.modal-header {
+    background-color: #39FF14;
+    color: #000;
+}
+
+.modal-body {
+    color: #fff;
+    text-align: center;
+}
+
+.modal-body img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.close {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+/* Fondo del modal */
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.4) !important;
+    pointer-events: none;
+}
+
+/* Animación de las tarjetas */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de las tarjetas */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Animación de las tarjetas */
+.card:hover .card-img-top {
+    filter: blur(2px);
+}

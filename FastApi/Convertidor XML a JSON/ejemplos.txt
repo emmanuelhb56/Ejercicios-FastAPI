@@ -1,0 +1,6 @@
+https://www.w3schools.com/xml/simple.xml
+https://www.w3schools.com/xml/note.xml
+https://www.w3schools.com/xml/cd_catalog.xml
+https://www.w3schools.com/xml/plant_catalog.xml
+https://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.xml
+https://www.w3.org/TR/2008/REC-xml-20081126/examples/lang.xml

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">Personajes de Rick and Morty</h1>
+        <div class="row mt-5">
+            {% for personaje in personajes %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ personaje.image }}" class="card-img-top" alt="Imagen de {{ personaje.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ personaje.name }}</h5>
+                        <p class="card-text"><strong>Especie:</strong> {{ personaje.species }}</p>
+                        <p class="card-text"><strong>Estado:</strong> {{ personaje.status }}</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#personajeModal{{ personaje.id }}">
+                            Ver detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para cada personaje -->
+            <div class="modal fade" id="personajeModal{{ personaje.id }}" tabindex="-1" role="dialog" aria-labelledby="personajeModalLabel{{ personaje.id }}" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="personajeModalLabel{{ personaje.id }}">{{ personaje.name }}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{ personaje.image }}" class="img-fluid mb-3" alt="Imagen de {{ personaje.name }}">
+                            <p><strong>Estado:</strong> {{ personaje.status }}</p>
+                            <p><strong>Género:</strong> {{ personaje.gender }}</p>
+                            <p><strong>Especie:</strong> {{ personaje.species }}</p>
+                            <p><strong>Localización:</strong> {{ personaje.location.name }}</p>
+                            <p><strong>Origen:</strong> {{ personaje.origin.name }}</p>
+                            <p><strong>Última ubicación conocida:</strong> {{ personaje.location.name }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
