@@ -1,0 +1,14 @@
+site_name: Business Analytics Docs
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: blue
+
+docs_dir: docs/docs/  
+
+nav:
+  - Inicio: index.md
+
+plugins:
+  - search

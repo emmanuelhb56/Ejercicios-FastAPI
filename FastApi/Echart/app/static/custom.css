@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
+    padding-top: 20px;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las tarjetas de indicadores */
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Asegurarnos de que todas las tarjetas tengan el mismo tamaño */
+.card.bg-success, .card.bg-info, .card.bg-warning, .card.bg-danger {
+    height: 200px;
+}
+
+/* Estilos para el gráfico principal */
+.chart-container {
+    height: 400px;
+    width: 100%;
+}
+
+/* Gráficos secundarios */
+.chart-mini {
+    height: 250px;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #212529;
+    height: 100%;
+    width: 200px !important;
+}
+
+.sidebar select {
+    color: #fff;
+}
+
+.navbar {
+    background-color: #007bff;
+}
+
+/* Ajuste para hacer los gráficos responsive */
+@media (max-width: 768px) {
+    .card.bg-success, .card.bg-info, .card.bg-warning, .card.bg-danger {
+        height: auto;
+    }
+
+    .chart-mini {
+        height: 200px;
+    }
+}
+
+/* Añadir colores de fondo más suaves para el tema oscuro */
+body[data-bs-theme="dark"] {
+    background-color: #121212;
+    color: #fff;
+}
